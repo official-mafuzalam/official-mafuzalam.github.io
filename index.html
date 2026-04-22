@@ -3,90 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mafuz Alam | Full Stack Developer</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Mafuz Alam · Developer Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
-        body { font-family: 'Inter', sans-serif; background-color: #0f172a; color: #f8fafc; }
-        .glass { background: rgba(30, 41, 59, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.1); }
-        .gradient-text { background: linear-gradient(90deg, #38bdf8, #818cf8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        /* Modern gradient background */
+        :root { --bg: #0a0a0a; --card: #1a1a1a; --accent: #6c63ff; }
+        body { background: var(--bg); color: #fff; font-family: 'Inter', sans-serif; margin: 0; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 2rem; }
+        .profile { display: flex; align-items: center; gap: 2rem; margin-bottom: 3rem; }
+        .avatar { width: 120px; height: 120px; border-radius: 50%; border: 3px solid var(--accent); }
+        .projects { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.5rem; }
+        .project-card { background: var(--card); padding: 1.5rem; border-radius: 12px; transition: transform 0.2s; }
+        .project-card:hover { transform: translateY(-5px); border-left: 4px solid var(--accent); }
+        .github-link { display: inline-block; margin-top: 1rem; color: var(--accent); text-decoration: none; }
+        /* Add more modern styling here */
     </style>
 </head>
-<body class="selection:bg-indigo-500 selection:text-white">
-
-    <nav class="fixed w-full z-50 px-6 py-4">
-        <div class="max-w-6xl mx-auto flex justify-between items-center glass rounded-2xl px-6 py-3">
-            <a href="#" class="text-xl font-bold tracking-tighter">MAFUZ<span class="text-sky-400">.</span></a>
-            <div class="space-x-8 hidden md:flex text-sm font-medium">
-                <a href="#about" class="hover:text-sky-400 transition">About</a>
-                <a href="#projects" class="hover:text-sky-400 transition">Projects</a>
-                <a href="#skills" class="hover:text-sky-400 transition">Skills</a>
-                <a href="mailto:official.mafuzalam@gmail.com" class="bg-sky-500 hover:bg-sky-600 px-4 py-2 rounded-lg transition">Contact</a>
-            </div>
-        </div>
-    </nav>
-
-    <section class="h-screen flex flex-col justify-center items-center text-center px-6">
-        <h2 class="text-lg font-medium text-sky-400 mb-4">Hello, I'm Mahfuzul Alam</h2>
-        <h1 class="text-5xl md:text-7xl font-extrabold mb-6">Building <span class="gradient-text">Scalable</span> Web Solutions.</h1>
-        <p class="max-w-2xl text-slate-400 text-lg mb-8">Full Stack Developer specializing in Laravel, PHP, and modern backend architectures like Multi-Tenancy and File Management.</p>
-        <div class="flex gap-4">
-            <a href="#projects" class="bg-white text-slate-900 px-8 py-3 rounded-full font-bold hover:bg-sky-400 transition">View My Work</a>
-            <a href="https://github.com/official-mafuzalam" target="_blank" class="glass px-8 py-3 rounded-full font-bold hover:bg-slate-800 transition"><i class="fab fa-github mr-2"></i>GitHub</a>
-        </div>
-    </section>
-
-    <section id="projects" class="max-w-6xl mx-auto py-20 px-6">
-        <h3 class="text-3xl font-bold mb-12 flex items-center"><span class="w-12 h-1 bg-sky-500 mr-4"></span>Featured Projects</h3>
-        <div class="grid md:grid-cols-2 gap-8">
-            
-            <div class="glass p-8 rounded-3xl group transition hover:border-sky-500">
-                <div class="flex justify-between items-start mb-4">
-                    <i class="fas fa-folder text-4xl text-sky-400"></i>
-                    <a href="https://github.com/official-mafuzalam/spatie-admin-filemanager" class="text-slate-400 hover:text-white"><i class="fas fa-external-link-alt"></i></a>
-                </div>
-                <h4 class="text-xl font-bold mb-2 group-hover:text-sky-400 transition">Spatie Admin File Manager</h4>
-                <p class="text-slate-400 text-sm mb-6">A robust file management system for admin panels built with Spatie and Laravel, featuring image thumbnails and symlink support.</p>
-                <div class="flex gap-3 text-xs font-mono text-sky-300">
-                    <span>#PHP</span> <span>#Laravel</span> <span>#Blade</span>
+<body>
+    <div class="container">
+        <div class="profile">
+            <img src="https://github.com/official-mafuzalam.png" alt="Mafuz Alam" class="avatar">
+            <div>
+                <h1>Mafuz Alam</h1>
+                <p>Full-stack developer & open source contributor</p>
+                <div class="social-links">
+                    <a href="https://github.com/official-mafuzalam"><i class="fab fa-github"></i></a>
                 </div>
             </div>
-
-            <div class="glass p-8 rounded-3xl group transition hover:border-sky-500">
-                <div class="flex justify-between items-start mb-4">
-                    <i class="fas fa-database text-4xl text-sky-400"></i>
-                    <a href="https://github.com/official-mafuzalam/spatie-admin-muti-tenancy" class="text-slate-400 hover:text-white"><i class="fas fa-external-link-alt"></i></a>
-                </div>
-                <h4 class="text-xl font-bold mb-2 group-hover:text-sky-400 transition">Admin Multi-Tenancy</h4>
-                <p class="text-slate-400 text-sm mb-6">Implementation of SaaS multi-tenancy architecture for administrative dashboards using modern database isolation patterns.</p>
-                <div class="flex gap-3 text-xs font-mono text-sky-300">
-                    <span>#Architecture</span> <span>#SaaS</span> <span>#Blade</span>
-                </div>
-            </div>
-
         </div>
-    </section>
-
-    <section id="skills" class="py-20 bg-slate-900/50">
-        <div class="max-w-6xl mx-auto px-6 text-center">
-            <h3 class="text-3xl font-bold mb-16">My Tech Stack</h3>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
-                <div class="glass p-6 rounded-2xl"><i class="fab fa-laravel text-4xl text-red-500 mb-4"></i><p>Laravel</p></div>
-                <div class="glass p-6 rounded-2xl"><i class="fab fa-php text-4xl text-indigo-400 mb-4"></i><p>PHP</p></div>
-                <div class="glass p-6 rounded-2xl"><i class="fab fa-js text-4xl text-yellow-400 mb-4"></i><p>JavaScript</p></div>
-                <div class="glass p-6 rounded-2xl"><i class="fas fa-code text-4xl text-sky-400 mb-4"></i><p>Blade UI</p></div>
+        
+        <h2>Featured Projects</h2>
+        <div class="projects">
+            <!-- Fetch GitHub repos via API or manually add -->
+            <div class="project-card">
+                <h3>Project Name</h3>
+                <p>Description of the project and technologies used.</p>
+                <a href="#" class="github-link">View on GitHub →</a>
             </div>
         </div>
-    </section>
-
-    <footer class="py-12 text-center text-slate-500 text-sm">
-        <div class="flex justify-center gap-6 mb-4 text-xl">
-            <a href="https://github.com/official-mafuzalam" class="hover:text-sky-400"><i class="fab fa-github"></i></a>
-            <a href="mailto:your-email@example.com" class="hover:text-sky-400"><i class="fas fa-envelope"></i></a>
-        </div>
-        <p>&copy; 2024 official-mafuzalam. Built with Tailwind & Passion.</p>
-    </footer>
-
+    </div>
+    <script>
+        // Fetch GitHub profile and repos dynamically
+        fetch('https://api.github.com/users/official-mafuzalam')
+            .then(res => res.json())
+            .then(data => {
+                // Update profile with real data
+                document.querySelector('h1').textContent = data.name || data.login;
+                document.querySelector('p').textContent = data.bio || 'Developer';
+                // Fetch repos and populate project cards
+            });
+    </script>
 </body>
 </html>
