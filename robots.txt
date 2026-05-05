@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://official-mafuzalam.github.io/sitemap.xml
